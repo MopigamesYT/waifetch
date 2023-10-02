@@ -1,10 +1,10 @@
-# Maintainer: Quincy Nyan <quinc@nekonyan.fun>
-pkgname='hentaifetch'
-pkgver=0.2.2
+# Maintainer: Mopigames <mopigames@proton.me>
+pkgname='waifetch'
+pkgver=0.1
 pkgrel=1
-pkgdesc="Neofetch but with hentai"
+pkgdesc="Neofetch but with waifus"
 arch=('x86_64')
-url="https://github.com/quincynyan/hentaifetch"
+url="https://github.com/MopigamesYT/waifetch/"
 license=('GPL')
 depends=('neofetch' 'w3m' 'chafa' 'jq' 'curl' 'bash' 'sed' 'grep')
 makedepends=('git')
@@ -21,12 +21,12 @@ optdepends=('imagemagick: Thumbnail creation'
 	'jp2a: Image support for kitty'
 	'caca-utils: Image support for kitty'
 	'libcaca: Image support for kitty')
-provides=('hentaifetch')
+provides=('waifetch')
 conflicts=()
 changelog=CHANGELOG.md
 # source=("$pkgname-$pkgver.tar.gz"
 #         "$pkgname-$pkgver.patch")
-source=("hentaifetch::git://github.com/quincynyan/hentaifetch.git")
+source=("waifetch::git://github.com/MopigamesYT/waifetch.git")
 noextract=()
 md5sums=('SKIP')
 
@@ -48,7 +48,7 @@ build() {
 
 package() {
 	cd "$pkgname"
-	install -Dm755 hentaifetch "$pkgdir/usr/bin/hentaifetch"
+	install -Dm755 waifetch "$pkgdir/usr/bin/waifetch"
 	install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 	install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
 }
